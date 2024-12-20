@@ -1,0 +1,348 @@
+/*Old Beauty*/
+/*Font family and Color preset*/
+
+@font-face{
+	font-family: supercharge;
+	src: url(./font/SuperchargeHalftone.otf);
+}
+@font-face{
+	font-family: welcome;
+	src: url(./font/WelcomeToFuture.ttf);
+}
+@font-face{
+	font-family: xeroda;
+	src: url(./font/XerodaRegular.otf);
+}
+
+:root{
+    --gris:#AAADBF;
+    --vert:#183940;
+    --jaune:#F2B544;
+    --rouge:#D92525;
+    --maron:#A66226;
+    --white:#fff;
+    --wht: rgba(255, 255, 255, 0.90);
+}
+
+/*class utilitaire*/
+.lead{
+	font-size: 2rem;
+	font-family: welcome;
+	color: var(--maron);
+	margin: 30px 10px;
+	text-align: center;
+}
+
+/*Default preset*/
+*{
+	margin: auto;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-weight: 400;
+	font-family: xeroda;
+	max-width: 1200px;
+}
+
+/*menu*/
+#menu{
+	top: 0;
+	left: 0;
+	position: sticky;
+	padding: 10px;
+	height: 8vh;
+	display: flex;
+	justify-content: space-around;
+	z-index: 2;
+	background: var(--wht);
+}
+#menu-mobile{
+			display: none;
+}
+#menu #menu_title, #menu #menu_title span{
+	font-family: supercharge;
+	font-size: 1.8rem;
+	color: var(--vert);
+}
+#menu #menu_title span{
+	color: var(--maron);
+}
+#menu #menu_link{
+	display: flex;
+}
+#menu #menu_link li{
+	margin: 10px;
+	padding: 0 10px;
+}
+#menu #menu_link li a{
+	color: var(--rouge);
+	font-size: 1.5rem;
+	transition: all ease-in-out 0.5s;
+
+}
+#menu #menu_link li a:hover{
+	letter-spacing: 0.3rem;
+	color: var(--vert);
+}
+
+/*home*/
+#home{
+	position: relative;
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	overflow: hidden;
+}
+#home .home_img{
+	width: 35%;
+	height: 100%;
+	border-radius: 5px 0 0 5px;
+	background: url(./img/home.jpg) no-repeat center center/cover;
+}
+#home .home_info{
+	height: 100%;
+	width: 65%;
+	background: var(--vert);
+	border-radius: 0 5px 5px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#home .home_info h2{
+	font-size: 3rem;
+	font-family: welcome;
+	color: var(--jaune);
+}
+#home .home_info h3{
+	font-size: 2rem;
+	text-align: center;
+	color: var(--gris);
+	margin: 10px;
+	margin-bottom: 20px;
+}
+#home .home_info p a{
+	background: var(--gris);
+	font-size: 1.5rem;
+	color: var(--rouge);
+	padding: 5px 20px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 0 0 var(--maron);
+	transition: all ease-in-out 0.5s;
+}
+#home .home_info p a:hover{
+	font-size: 1.7rem;
+	letter-spacing: 0.2rem;
+}
+
+/*products*/
+#products .products_items{
+	display: flex;
+	position: relative;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+#products .products_items .product{
+	display: flex;
+	flex-direction: column;
+	width: 23%;
+	margin: 5px;
+	padding: 10px;
+	border: 1px solid var(--vert);
+	box-shadow: 5px 5px 0 0 var(--maron);
+	height: 270px;
+}
+#products .products_items .product img{
+	width: 100%;
+}
+#products .products_items .product .product_text{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+#products .products_items .product .product_link a{
+    color: var(--white);
+    background: var(--rouge);
+    font-size: 1rem;
+    padding: 0 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 0 var(--maron);
+    transition: all ease 0.5s;
+}
+#products .products_items .product .product_link a:hover{
+    letter-spacing: 0.2rem;
+    font-size: 1.2rem;
+}
+
+/*about*/
+#about_us .about{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 43vh;
+    padding: 20px;
+}
+#about_us .about .about_img{
+    height: 100%;
+    width: 35%;
+    background: url(./img/about1.jpg) no-repeat center center/cover;
+}
+#about_us .about .about_info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    width: 75%;
+    height: 100%;
+    border-left: 3px solid var(--rouge);
+    overflow: hidden;
+}
+#about_us .about .about_info p{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+/*Contact*/
+#contact_us{
+	position: relative;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+#contact_us .contact{
+	display: flex;
+	width: 100%;
+}
+#contact_us .contact .contact_info{
+	max-width: 40%;
+	height: 100%;
+}
+#contact_us .contact .contact_info p{
+	font-size: 1.2rem;
+	text-align: justify;
+}
+#contact_us .contact .contact_info, #contact_us .contact .contact_form{
+	margin: 5px;
+	padding: 10px;
+}
+#contact_us .contact .contact_form form{
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+}
+#contact_us .contact .contact_form label{
+	font-size: 1.2rem;
+	margin: 15px;
+	text-transform: capitalize;
+}
+#contact_us .contact .contact_form input, #contact_us .contact .contact_form textarea{
+	padding: 5px;
+	border: 0.5px solid var(--gris);
+	box-shadow: 5px 5px 0 0 var(--vert);
+}
+#contact_us .contact .contact_form input::placeholder, #contact_us .contact .contact_form textarea::placeholder{
+	font-size: 1rem;
+	font-style: italic;
+	padding: 5px 10px;
+}
+#contact_us .contact .contact_form input:focus, #contact_us .contact .contact_form textarea:focus{
+	outline: none;
+}
+#contact_us .contact .contact_form .info{
+	width: 100%;
+}
+#contact_us .contact .contact_form .info input{
+	width: 35.5%;
+	font-size: 1rem;
+}
+#contact_us .contact .contact_form .checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+#contact_us .contact .contact_form .checkbox .check{
+    width: 25%;
+    padding: 5px 10px;
+}
+#contact_us .contact .contact_form input[type = "e-mail"]{
+    padding: 10px;
+    width: 90%;
+    font-size: 1rem;
+}
+#contact_us .contact .contact_form textarea{
+    width: 90%;
+    height: 80px;
+    padding: 10px;
+    font-size: 1rem; 
+}
+#contact_us .contact .contact_form input[type = "submit"]{
+    margin-top: 20px;
+    width: 100px;
+    color: var(--white);
+    background: var(--vert);
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 0 var(--maron);
+    transition: all ease 0.5s;   
+}
+#contact_us .contact .contact_form input[type = "submit"]:hover{
+	font-size: 1.1rem;
+	letter-spacing: 0.1rem;
+}
+
+/* footer */
+#footer{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 15px;
+	width: 100%;
+	padding: 10px 5px;
+	background: var(--vert);
+	color: var(--gris);
+}
+#footer h3{
+    font-size: 1.2rem;
+    font-family: welcome;
+    margin: 5px;
+    color: var(--maron);
+}
+#footer > div{
+    width: 30%;
+    margin: 20px;
+}
+#footer .info h3{
+    text-align: center;
+}
+#footer .info p{
+    text-align: justify;
+    font-size: 1rem;
+}
+#footer .product ul li, #footer .social ul li, #footer .contact ul li{
+    font-size: 1rem;
+    margin: 8px 0;
+}
+#footer .social ul li a{
+    color: var(--gris);
+    font-size: 1rem;
+    transition: all ease-out 0.4s;
+}
+#footer .social ul li a:hover{
+    letter-spacing: 0.2rem;
+}
+.copyright{
+    background: var(--vert);
+    padding-bottom: 15px;
+    color: var(--gris);
+    text-align: center;
+    font-size: 1.5rem;
+}
+.copyright span{
+    font-style: italic;
+    font-family: welcome;
+    color: var(--jaune);
+}
